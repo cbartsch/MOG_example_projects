@@ -1,0 +1,14 @@
+Library/
+.idea/
+build/
+Logs/
+Temp/
+obj/
+bin/
+.vs/
+
+*.sln
+*.user*
+*.csproj
+*.zip
+*.apk
