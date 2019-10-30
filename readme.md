@@ -1,0 +1,1 @@
+Example projects for Mobile Games lecture in Mobile Computing @ University of Applied Sciences Hagenberg
