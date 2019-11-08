@@ -1,0 +1,8 @@
+{
+  "title": "Felgo test app",
+  "identifier": "at.fhooe.mc.mog.VPlayTest",
+  "orientation": "landscape",
+  "versioncode": 1,
+  "versionname": "1.0",
+  "stage": "test"
+}
