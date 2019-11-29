@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
   felgo.setMainQmlFileName(QStringLiteral("qml/Main.qml"));
   engine.load(QUrl(felgo.mainQmlFileName()));
 
+  engine.rootObjects().first()->setProperty("testString", QString("C++ string"));
+
   return app.exec();
 }
 

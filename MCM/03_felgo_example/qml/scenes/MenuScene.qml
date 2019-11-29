@@ -11,6 +11,9 @@ BaseScene {
     x: 10
     y: 10
     text: "Show game scene"
-    onClicked: gameScene.show()
+    onClicked: {
+      testItem.testMethod()
+      gameScene.show()
+    }
   }
 }

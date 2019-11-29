@@ -5,6 +5,8 @@ EntityBase {
   id: testEntity
   entityType: "testEntity"
 
+  focus: true
+
   property color color: Qt.rgba(Math.random(),
                                 Math.random(),
                                 Math.random(), 1)
@@ -13,6 +15,10 @@ EntityBase {
     width: 50
     height: 50
     color: testEntity.color
+  }
+
+  Keys.onPressed: {
+    x += 10
   }
 }
 
