@@ -13,7 +13,7 @@ public class UdpMatchmaker : MonoBehaviour {
     //UDP port for matchmaking
     public short matchmakingPort = 1235;
 
-    //port to connect UNet to
+    //port to connect UNet to (same as NetworkServer port setting)
     public short gamePort = 1234;
 
     //one UDP socket for broadcasting, one for receiving
@@ -34,6 +34,7 @@ public class UdpMatchmaker : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (NetworkServer.active) {
+            //server: send broadcast message to all clients in the local network 
             if (client != null) {
                 //do not keep port open
                 client.Close();
@@ -49,7 +50,7 @@ public class UdpMatchmaker : MonoBehaviour {
             timeUntilMsg -= Time.deltaTime;
         }
         else if (!receiving) {
-            //receive from any address
+            //client: receive broadcast message from any address
             if (client == null) {
                 try {
                     client = new UdpClient(new IPEndPoint(IPAddress.Any, matchmakingPort));
@@ -87,7 +88,7 @@ public class UdpMatchmaker : MonoBehaviour {
         byte[] data = client.EndReceive(ar, ref serverEndPoint);
 
         //check for our defined message - anyone could send us anything
-        if (data?.SequenceEqual(MSG) ?? false) {
+        if (data != null && data.SequenceEqual(MSG)) {
             foundServerEndPoint = serverEndPoint;
         }
     }
