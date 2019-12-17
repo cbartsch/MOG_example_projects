@@ -6,26 +6,34 @@ public class ForceExample : MonoBehaviour {
 
     public float moveSpeed = 10;
     public float jumpForce = 100;
+    private Rigidbody body;
 
     // Use this for initialization
-	void Start () {
-		
+	void Start () 
+	{
+		body = GetComponent<Rigidbody>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	    var body = GetComponent<Rigidbody>();
-
-	    float xInput = Input.GetAxis("Horizontal");
+	// FixedUpdate is called once per physics update step
+	void FixedUpdate ()
+	{
+		float xInput = Input.GetAxis("Horizontal");
 	    float yInput = Input.GetAxis("Vertical");
 
+	    // Move: add horizontal force
 	    var moveVector = xInput * Vector3.right + 
 	                     yInput * Vector3.forward;
 
-        body.AddForce(moveVector * moveSpeed);
+	    body.AddForce(moveVector * moveSpeed);
+	}
 
-	    if (Input.GetButtonDown("Fire1")) {
-            body.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-	    }
+	// Update is called once per frame
+	private void Update() 
+	{
+		// Jump: add vertical impulse
+		if (Input.GetButtonDown("Jump"))
+		{
+			body.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+		}
 	}
 }

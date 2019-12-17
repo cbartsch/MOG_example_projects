@@ -24,10 +24,10 @@ dependencies {
     compile "com.android.support:support-core-utils:27.1.0"
     compile "com.android.support:appcompat-v7:27.1.0"
 
-    compile 'net.vplay.plugins:plugin-admob:2.+'
-    compile 'net.vplay.plugins:plugin-amplitude:2.+'
-    compile 'net.vplay.plugins:plugin-notification:2.+'
-    compile 'net.vplay.plugins:plugin-soomla:2.+'
+    compile 'net.vplay.plugins:plugin-admob:3.+'
+    compile 'net.vplay.plugins:plugin-amplitude:3.+'
+    compile 'net.vplay.plugins:plugin-notification:3.+'
+    compile 'net.vplay.plugins:plugin-soomla:3.+'
 }
 
 android {

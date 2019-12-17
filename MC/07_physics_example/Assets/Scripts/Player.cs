@@ -13,7 +13,9 @@ public class Player : MonoBehaviour
     public float walkForce = 50;
     public float drag = 1;
     
-    private bool groundContact = false;
+    private int groundContacts = 0;
+    
+    private bool groundContact => groundContacts > 0;
 
     // Use this for initialization
     void Start()
@@ -23,19 +25,18 @@ public class Player : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (groundContact)
+        if (groundContact) 
         {
             float force = walkForce * Input.GetAxis("Horizontal");
             spriteRenderer.flipX = force < 0;
             body.AddForce(Vector2.right * force);
         }
-
     }
+
 
     private void Update()
     {
-        if (groundContact && Input.GetButtonDown("Jump"))
-        {
+        if (groundContact && Input.GetButtonDown("Jump")) {
             body.velocity = new Vector2(body.velocity.x, 0);
             body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
@@ -44,22 +45,33 @@ public class Player : MonoBehaviour
 
         animator.SetBool("Grounded", groundContact);
         animator.SetFloat("YVel", body.velocity.y);
+    }
+    
+    
+    private void Walk() {
+        float force = walkForce * Input.GetAxis("Horizontal");
+        spriteRenderer.flipX = force < 0;
+        body.AddForce(Vector2.right * force);
+    }
 
+    private void Jump() {
+        body.velocity = new Vector2(body.velocity.x, 0);
+        body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Ground")
+        if (coll.gameObject.CompareTag("Ground"))
         {
-            groundContact = true;
+            groundContacts++;
         }
     }
 
     void OnCollisionExit2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Ground")
+        if (coll.gameObject.CompareTag("Ground"))
         {
-            groundContact = false;
+            groundContacts--;
         }
     }
 }

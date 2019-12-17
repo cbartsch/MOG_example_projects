@@ -21,9 +21,9 @@ public class FirstPersonShooter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            //ShootToCenter();
+            ShootToCenter();
             //ShootToMousePosition();
-            ShootAngled();
+            //ShootAngled();
         }
     }
 
