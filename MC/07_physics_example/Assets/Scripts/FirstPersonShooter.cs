@@ -30,11 +30,13 @@ public class FirstPersonShooter : MonoBehaviour
     private void ShootToCenter()
     {
         //instantiate bullet at camera position
-        var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        var bullet = Instantiate(bulletPrefab, 
+            transform.position,
+            Quaternion.identity);
 
         //apply impulse in direction to mouse position
         var body = bullet.GetComponent<Rigidbody>();
-        body.AddForce(transform.forward * shootForce, ForceMode.Impulse);
+        body.AddForce(this.transform.forward * shootForce, ForceMode.Impulse);
     }
 
     private void ShootToMousePosition()
@@ -43,7 +45,9 @@ public class FirstPersonShooter : MonoBehaviour
         var dirRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         //instantiate bullet at camera position
-        var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        var bullet = Instantiate(bulletPrefab,
+            transform.position + dirRay.direction
+            , Quaternion.identity);
 
         //apply impulse in direction to mouse position
         var body = bullet.GetComponent<Rigidbody>();
@@ -52,9 +56,6 @@ public class FirstPersonShooter : MonoBehaviour
 
     private void ShootAngled()
     {
-        //instantiate bullet in front of camera position
-        var bullet = Instantiate(bulletPrefab, transform.position + transform.forward * 1, 
-            Quaternion.identity);
 
         //get mouse position in interval [0, 1]
         var mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
@@ -68,6 +69,10 @@ public class FirstPersonShooter : MonoBehaviour
         var rotation = Quaternion.AngleAxis(xAngle, transform.up) *
             Quaternion.AngleAxis(yAngle, transform.right);
 
+        //instantiate bullet in front of camera position
+        var bullet = Instantiate(bulletPrefab, transform.position + transform.forward * 1, 
+            Quaternion.identity);
+        
         //apply force to rotated forward vector (multiplication = apply quaternion)
         var body = bullet.GetComponent<Rigidbody>();
         body.AddForce(rotation * transform.forward * shootForce, ForceMode.Impulse);
