@@ -52,18 +52,17 @@
 
 		fixed4 frag(v2f i) : SV_Target 
 		{
-			fixed4 col = fixed4(0, 0, 0, 0);
+            fixed4 col = fixed4(0, 0, 0, 0);
 
 			int iterations = _Samples * 2 + 1;
 
 			// compute average of surrounding texture pixels in a square of length iterations (= gaussian blur)
-		/*	for (int j = 0; j < iterations * iterations; j++) {
+			for (int j = 0; j < iterations * iterations; j++) {
 				float x = ((j % iterations) - _Samples) * _Radius;
 				float y = ((j / iterations) - _Samples) * _Radius;
 				col += tex2D(_MainTex, i.uv + float2(x, y));
 			}
-			*/
-
+			
 			col /= iterations * iterations;
 
 			return col;
