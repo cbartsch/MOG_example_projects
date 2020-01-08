@@ -28,7 +28,4 @@ MonoBehaviour:
     - False
     - False
     - -1
-  TrackedResourceAssets:
-  - Id: notification_icon
-    Type: 0
-    Asset: {fileID: 2800000, guid: bf4b5a5e6d65eff4fbd013e3478913db, type: 3}
+  TrackedResourceAssets: []
