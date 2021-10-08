@@ -11,14 +11,14 @@ public class AcceleroControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	    var body = GetComponent<Rigidbody>();
+	    
 	    Input.gyro.enabled = true;
 
 	    var movement = Input.gyro.userAcceleration;
 
         Debug.Log("acceleration: " + movement);
-
-	    var body = GetComponent<Rigidbody>();
-
+        
         body.AddForce(movement * 50);
 	}
 }
