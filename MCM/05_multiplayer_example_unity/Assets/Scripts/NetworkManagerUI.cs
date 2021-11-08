@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.Networking;
 using System;
+using Unity.Netcode;
+using Unity.Netcode.Transports.UNET;
 
 public class NetworkManagerUI : MonoBehaviour {
     public NetworkManager networkManager;
+    public UNetTransport networkTransport;
 
     public InputField inputHostName;
 
@@ -26,23 +28,23 @@ public class NetworkManagerUI : MonoBehaviour {
     }
 
     public void StartHost() {
-        networkManager.networkPort = port;
+        networkTransport.ConnectPort = port;
         networkManager.StartHost();
     }
 
     public void StartServer() {
-        networkManager.networkPort = port;
+        networkTransport.ConnectPort = port;
         networkManager.StartServer();
     }
 
     public void StartClient() {
-        networkManager.networkPort = port;
-        networkManager.networkAddress = inputHostName.text;
+        networkTransport.ConnectPort = port;
+        networkTransport.ConnectAddress = inputHostName.text;
         networkManager.StartClient();
     }
 
     private void updateUI() {
-        bool networkActive = NetworkServer.active || NetworkClient.active;
+        bool networkActive = networkManager.IsServer || networkManager.IsClient;
 
         buttonHost.gameObject.SetActive(!networkActive);
         buttonServer.gameObject.SetActive(!networkActive);
@@ -53,12 +55,12 @@ public class NetworkManagerUI : MonoBehaviour {
     }
 
     public void Disconnect() {
-        if (NetworkClient.active) {
-            networkManager.StopClient();
+        if (networkManager.IsClient) {
+            networkManager.Shutdown();
         }
 
-        if (NetworkServer.active) {
-            networkManager.StopServer();
+        if (networkManager.IsServer) {
+            networkManager.Shutdown();
         }
     }
 }

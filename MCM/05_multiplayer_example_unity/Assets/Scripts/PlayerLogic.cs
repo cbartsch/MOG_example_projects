@@ -1,34 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
+using Unity.Netcode;
+using Unity.Netcode.Components;
 
 public class PlayerLogic : NetworkBehaviour {
 
     public float moveSpeed = 10, rotateSpeed = 4;
 
     //synchronize points from server to all clients
-    [SyncVar]
-    private int points;
+    private NetworkVariable<int> points;
 
-    [SyncVar]
-    private Color color;
+    private NetworkVariable<Color> color;
 
     //public accessor
     public int Points
     {
-        get { return points; }
-        set { points = value; }
+        get { return points.Value; }
+        set { points.Value = value; }
     }
 
 	// Use this for initialization
 	void Start ()
     {
-        var networkId = GetComponent<NetworkIdentity>();
+        var networkId = GetComponent<NetworkObject>();
 
-        if (NetworkServer.active)
+        if (NetworkManager.Singleton.IsServer)
         {
             //server "chooses" color for players (SyncVars sync from server to client)
-            color = Random.ColorHSV(
+            color.Value = Random.ColorHSV(
                 0, 1,
                 0.5f, 1, 
                 0.5f, 1); //generates colors that are neither too dark nor too bright
@@ -38,12 +37,12 @@ public class PlayerLogic : NetworkBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        GetComponent<Renderer>().material.color = this.color;
+        GetComponent<Renderer>().material.color = this.color.Value;
 
-        var isLocal = isLocalPlayer;
+        Debug.Log("player " + name + " is local " + IsLocalPlayer + " is owner " + IsOwner, gameObject);
         
         //only control local player object
-        if (isLocal)
+        if (IsLocalPlayer)
         {
             control();
 
@@ -53,33 +52,47 @@ public class PlayerLogic : NetworkBehaviour {
             Camera.main.transform.localRotation = Quaternion.identity;
         }
 
-        GetComponentInChildren<TextMesh>().text = System.Convert.ToString(points);
+        GetComponentInChildren<TextMesh>().text = System.Convert.ToString(points.Value);
     }
 
-    private void OnDestroy()
+    public override void OnDestroy()
     {
         //make camera global again instead of following player
 
         var camera = GetComponentInChildren<Camera>();
         if (camera != null)
         {
+            Debug.Log("reset camera", gameObject);
             camera.transform.parent = null;
             camera.enabled = true;
             camera.transform.position = new Vector3(0, 1, -10);
             camera.transform.rotation = Quaternion.Euler(45, 0, 0);
         }
+        
+        base.OnDestroy();
     }
 
     private void control()
     {
+        var yInput = Input.GetAxis("Vertical");
+        var xInput = Input.GetAxis("Horizontal");
+
+        // must do all movement on the server - send RPC
+        MovementServerRpc(xInput, yInput);
+    }
+
+    [ServerRpc]
+    private void MovementServerRpc(float xInput, float yInput) {
+        
         var body = GetComponent<Rigidbody>();
 
-        body.AddForce(transform.forward * moveSpeed * Input.GetAxis("Vertical"));
-
-        body.AddTorque(Vector3.up * rotateSpeed * Input.GetAxis("Horizontal"));
+        var transformForward = transform.forward * moveSpeed * yInput;
+        
+        body.AddForce(transformForward);
+        body.AddTorque(Vector3.up * rotateSpeed * xInput);
 
         var networkTransform = GetComponent<NetworkTransform>().transform;
-
+        
         //reset player if fallen down
         if (networkTransform.position.y < -10)
         {
@@ -89,16 +102,16 @@ public class PlayerLogic : NetworkBehaviour {
             body.velocity = Vector3.zero;
             body.angularVelocity = Vector3.zero;
 
-            CmdResetPoints();
+            points.Value = 0;
         }
     }
 
-    [Command]
-    public void CmdResetPoints()
+    [ServerRpc]
+    public void ResetPointsServerRpc()
     {
-        if(NetworkServer.active)
+        if(NetworkManager.Singleton.IsServer)
         {
-            points = 0;
+            points.Value = 0;
         }
     }
 }

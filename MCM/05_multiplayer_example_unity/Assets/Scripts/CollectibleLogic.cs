@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
+using Unity.Netcode;
 
 public class CollectibleLogic : MonoBehaviour {
     // Use this for initialization
@@ -13,7 +13,7 @@ public class CollectibleLogic : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         //only apply collision logic on server, sync events to clients
-        if (!NetworkServer.active) {
+        if (!NetworkManager.Singleton.IsServer) {
             return;
         }
 

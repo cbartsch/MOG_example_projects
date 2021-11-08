@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
+using Unity.Netcode;
+using NetworkManager = Unity.Netcode.NetworkManager;
 
 public class GameLogic : MonoBehaviour {
     public GameObject collectiblePrefab;
@@ -17,7 +18,7 @@ public class GameLogic : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         //logic here only performed on server
-        if (!NetworkServer.active) {
+        if (!NetworkManager.Singleton.IsServer) {
             return;
         }
 
@@ -36,7 +37,7 @@ public class GameLogic : MonoBehaviour {
                 gameWorld.transform //parent
             ) as GameObject).GetComponent<CollectibleLogic>();
 
-            NetworkServer.Spawn(collectible.gameObject);
+            collectible.gameObject.GetComponent<NetworkObject>().Spawn();
         }
     }
 }

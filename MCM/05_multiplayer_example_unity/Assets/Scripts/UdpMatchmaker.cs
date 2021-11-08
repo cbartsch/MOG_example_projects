@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Net.Sockets;
-using UnityEngine.Networking;
 using System.Net;
 using System.Linq;
 using System;
+using Unity.Netcode;
+using Unity.Netcode.Transports.UNET;
 
 public class UdpMatchmaker : MonoBehaviour {
+
+    public UNetTransport networkTransport;
+    
     //some data so the receiver can recognize the message
     static readonly byte[] MSG = {1, 2, 3, 4, 5, 6, 7, 8};
 
@@ -33,7 +37,7 @@ public class UdpMatchmaker : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (NetworkServer.active) {
+        if (NetworkManager.Singleton.IsServer) {
             //server: send broadcast message to all clients in the local network 
             if (client != null) {
                 //do not keep port open
@@ -67,12 +71,12 @@ public class UdpMatchmaker : MonoBehaviour {
         }
 
         //needs to be done in the main thread
-        if (foundServerEndPoint != null && !NetworkClient.active) {
+        if (foundServerEndPoint != null && !NetworkManager.Singleton.IsClient) {
             var addr = foundServerEndPoint.Address.ToString();
-            var man = NetworkManager.singleton;
+            var man = NetworkManager.Singleton;
 
-            man.networkPort = gamePort;
-            man.networkAddress = addr;
+            networkTransport.ConnectPort = gamePort;
+            networkTransport.ConnectAddress = addr;
             man.StartClient();
 
             foundServerEndPoint = null;
