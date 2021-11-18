@@ -1,7 +1,7 @@
 ﻿ using UnityEngine;
 using System.Collections;
 
-public class CharacterController : MonoBehaviour {
+public class MyCharacterController : MonoBehaviour {
 
     private Animator animator;
     
