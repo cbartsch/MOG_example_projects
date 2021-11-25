@@ -927,7 +927,7 @@ TextureImporter:
       213: 21300614
     second: items-objects_307
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -947,6 +947,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -956,8 +958,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -978,9 +980,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -7499,6 +7505,315 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      items-objects_0: 21300000
+      items-objects_219: 21300438
+      items-objects_33: 21300066
+      items-objects_86: 21300172
+      items-objects_183: 21300366
+      items-objects_4: 21300008
+      items-objects_254: 21300508
+      items-objects_260: 21300520
+      items-objects_238: 21300476
+      items-objects_16: 21300032
+      items-objects_222: 21300444
+      items-objects_273: 21300546
+      items-objects_103: 21300206
+      items-objects_98: 21300196
+      items-objects_302: 21300604
+      items-objects_144: 21300288
+      items-objects_167: 21300334
+      items-objects_306: 21300612
+      items-objects_96: 21300192
+      items-objects_258: 21300516
+      items-objects_76: 21300152
+      items-objects_12: 21300024
+      items-objects_121: 21300242
+      items-objects_141: 21300282
+      items-objects_215: 21300430
+      items-objects_75: 21300150
+      items-objects_242: 21300484
+      items-objects_102: 21300204
+      items-objects_133: 21300266
+      items-objects_131: 21300262
+      items-objects_123: 21300246
+      items-objects_206: 21300412
+      items-objects_189: 21300378
+      items-objects_203: 21300406
+      items-objects_265: 21300530
+      items-objects_73: 21300146
+      items-objects_3: 21300006
+      items-objects_283: 21300566
+      items-objects_214: 21300428
+      items-objects_88: 21300176
+      items-objects_127: 21300254
+      items-objects_169: 21300338
+      items-objects_117: 21300234
+      items-objects_166: 21300332
+      items-objects_114: 21300228
+      items-objects_201: 21300402
+      items-objects_135: 21300270
+      items-objects_156: 21300312
+      items-objects_155: 21300310
+      items-objects_6: 21300012
+      items-objects_27: 21300054
+      items-objects_90: 21300180
+      items-objects_51: 21300102
+      items-objects_287: 21300574
+      items-objects_104: 21300208
+      items-objects_8: 21300016
+      items-objects_14: 21300028
+      items-objects_79: 21300158
+      items-objects_82: 21300164
+      items-objects_239: 21300478
+      items-objects_272: 21300544
+      items-objects_303: 21300606
+      items-objects_106: 21300212
+      items-objects_36: 21300072
+      items-objects_293: 21300586
+      items-objects_40: 21300080
+      items-objects_289: 21300578
+      items-objects_48: 21300096
+      items-objects_216: 21300432
+      items-objects_231: 21300462
+      items-objects_45: 21300090
+      items-objects_63: 21300126
+      items-objects_108: 21300216
+      items-objects_30: 21300060
+      items-objects_101: 21300202
+      items-objects_64: 21300128
+      items-objects_37: 21300074
+      items-objects_129: 21300258
+      items-objects_281: 21300562
+      items-objects_24: 21300048
+      items-objects_126: 21300252
+      items-objects_115: 21300230
+      items-objects_154: 21300308
+      items-objects_179: 21300358
+      items-objects_296: 21300592
+      items-objects_225: 21300450
+      items-objects_164: 21300328
+      items-objects_44: 21300088
+      items-objects_146: 21300292
+      items-objects_224: 21300448
+      items-objects_232: 21300464
+      items-objects_246: 21300492
+      items-objects_280: 21300560
+      items-objects_29: 21300058
+      items-objects_53: 21300106
+      items-objects_61: 21300122
+      items-objects_137: 21300274
+      items-objects_142: 21300284
+      items-objects_279: 21300558
+      items-objects_285: 21300570
+      items-objects_264: 21300528
+      items-objects_244: 21300488
+      items-objects_173: 21300346
+      items-objects_113: 21300226
+      items-objects_139: 21300278
+      items-objects_192: 21300384
+      items-objects_170: 21300340
+      items-objects_278: 21300556
+      items-objects_2: 21300004
+      items-objects_109: 21300218
+      items-objects_25: 21300050
+      items-objects_38: 21300076
+      items-objects_174: 21300348
+      items-objects_78: 21300156
+      items-objects_172: 21300344
+      items-objects_284: 21300568
+      items-objects_197: 21300394
+      items-objects_39: 21300078
+      items-objects_299: 21300598
+      items-objects_49: 21300098
+      items-objects_178: 21300356
+      items-objects_180: 21300360
+      items-objects_267: 21300534
+      items-objects_60: 21300120
+      items-objects_295: 21300590
+      items-objects_26: 21300052
+      items-objects_188: 21300376
+      items-objects_230: 21300460
+      items-objects_19: 21300038
+      items-objects_77: 21300154
+      items-objects_138: 21300276
+      items-objects_277: 21300554
+      items-objects_209: 21300418
+      items-objects_72: 21300144
+      items-objects_89: 21300178
+      items-objects_21: 21300042
+      items-objects_221: 21300442
+      items-objects_157: 21300314
+      items-objects_196: 21300392
+      items-objects_11: 21300022
+      items-objects_57: 21300114
+      items-objects_46: 21300092
+      items-objects_255: 21300510
+      items-objects_116: 21300232
+      items-objects_149: 21300298
+      items-objects_143: 21300286
+      items-objects_248: 21300496
+      items-objects_294: 21300588
+      items-objects_171: 21300342
+      items-objects_55: 21300110
+      items-objects_130: 21300260
+      items-objects_122: 21300244
+      items-objects_136: 21300272
+      items-objects_94: 21300188
+      items-objects_247: 21300494
+      items-objects_182: 21300364
+      items-objects_190: 21300380
+      items-objects_186: 21300372
+      items-objects_218: 21300436
+      items-objects_159: 21300318
+      items-objects_158: 21300316
+      items-objects_9: 21300018
+      items-objects_194: 21300388
+      items-objects_92: 21300184
+      items-objects_34: 21300068
+      items-objects_226: 21300452
+      items-objects_212: 21300424
+      items-objects_58: 21300116
+      items-objects_256: 21300512
+      items-objects_87: 21300174
+      items-objects_241: 21300482
+      items-objects_62: 21300124
+      items-objects_124: 21300248
+      items-objects_233: 21300466
+      items-objects_1: 21300002
+      items-objects_245: 21300490
+      items-objects_134: 21300268
+      items-objects_28: 21300056
+      items-objects_150: 21300300
+      items-objects_269: 21300538
+      items-objects_18: 21300036
+      items-objects_107: 21300214
+      items-objects_259: 21300518
+      items-objects_100: 21300200
+      items-objects_47: 21300094
+      items-objects_251: 21300502
+      items-objects_70: 21300140
+      items-objects_35: 21300070
+      items-objects_99: 21300198
+      items-objects_13: 21300026
+      items-objects_262: 21300524
+      items-objects_270: 21300540
+      items-objects_165: 21300330
+      items-objects_71: 21300142
+      items-objects_83: 21300166
+      items-objects_181: 21300362
+      items-objects_140: 21300280
+      items-objects_257: 21300514
+      items-objects_111: 21300222
+      items-objects_152: 21300304
+      items-objects_22: 21300044
+      items-objects_228: 21300456
+      items-objects_304: 21300608
+      items-objects_5: 21300010
+      items-objects_211: 21300422
+      items-objects_56: 21300112
+      items-objects_145: 21300290
+      items-objects_290: 21300580
+      items-objects_301: 21300602
+      items-objects_54: 21300108
+      items-objects_288: 21300576
+      items-objects_118: 21300236
+      items-objects_80: 21300160
+      items-objects_249: 21300498
+      items-objects_298: 21300596
+      items-objects_65: 21300130
+      items-objects_50: 21300100
+      items-objects_125: 21300250
+      items-objects_176: 21300352
+      items-objects_193: 21300386
+      items-objects_202: 21300404
+      items-objects_204: 21300408
+      items-objects_161: 21300322
+      items-objects_274: 21300548
+      items-objects_261: 21300522
+      items-objects_198: 21300396
+      items-objects_153: 21300306
+      items-objects_148: 21300296
+      items-objects_17: 21300034
+      items-objects_91: 21300182
+      items-objects_229: 21300458
+      items-objects_119: 21300238
+      items-objects_168: 21300336
+      items-objects_84: 21300168
+      items-objects_132: 21300264
+      items-objects_151: 21300302
+      items-objects_268: 21300536
+      items-objects_297: 21300594
+      items-objects_300: 21300600
+      items-objects_282: 21300564
+      items-objects_185: 21300370
+      items-objects_43: 21300086
+      items-objects_20: 21300040
+      items-objects_234: 21300468
+      items-objects_41: 21300082
+      items-objects_81: 21300162
+      items-objects_252: 21300504
+      items-objects_237: 21300474
+      items-objects_210: 21300420
+      items-objects_52: 21300104
+      items-objects_32: 21300064
+      items-objects_208: 21300416
+      items-objects_291: 21300582
+      items-objects_95: 21300190
+      items-objects_191: 21300382
+      items-objects_97: 21300194
+      items-objects_93: 21300186
+      items-objects_243: 21300486
+      items-objects_227: 21300454
+      items-objects_175: 21300350
+      items-objects_112: 21300224
+      items-objects_66: 21300132
+      items-objects_207: 21300414
+      items-objects_305: 21300610
+      items-objects_307: 21300614
+      items-objects_7: 21300014
+      items-objects_42: 21300084
+      items-objects_110: 21300220
+      items-objects_213: 21300426
+      items-objects_220: 21300440
+      items-objects_162: 21300324
+      items-objects_160: 21300320
+      items-objects_105: 21300210
+      items-objects_177: 21300354
+      items-objects_223: 21300446
+      items-objects_120: 21300240
+      items-objects_59: 21300118
+      items-objects_263: 21300526
+      items-objects_276: 21300552
+      items-objects_68: 21300136
+      items-objects_15: 21300030
+      items-objects_195: 21300390
+      items-objects_286: 21300572
+      items-objects_199: 21300398
+      items-objects_205: 21300410
+      items-objects_236: 21300472
+      items-objects_23: 21300046
+      items-objects_187: 21300374
+      items-objects_74: 21300148
+      items-objects_31: 21300062
+      items-objects_85: 21300170
+      items-objects_10: 21300020
+      items-objects_292: 21300584
+      items-objects_250: 21300500
+      items-objects_200: 21300400
+      items-objects_275: 21300550
+      items-objects_217: 21300434
+      items-objects_235: 21300470
+      items-objects_266: 21300532
+      items-objects_69: 21300138
+      items-objects_128: 21300256
+      items-objects_240: 21300480
+      items-objects_271: 21300542
+      items-objects_184: 21300368
+      items-objects_67: 21300134
+      items-objects_147: 21300294
+      items-objects_163: 21300326
+      items-objects_253: 21300506
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

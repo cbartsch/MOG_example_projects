@@ -36,7 +36,8 @@ public class FirstPersonShooter : MonoBehaviour
 
         //apply impulse in direction to mouse position
         var body = bullet.GetComponent<Rigidbody>();
-        body.AddForce(this.transform.forward * shootForce, ForceMode.Impulse);
+        body.AddForce(this.transform.forward * shootForce, 
+            ForceMode.Impulse);
     }
 
     private void ShootToMousePosition()
@@ -46,12 +47,13 @@ public class FirstPersonShooter : MonoBehaviour
 
         //instantiate bullet at camera position
         var bullet = Instantiate(bulletPrefab,
-            transform.position + dirRay.direction
-            , Quaternion.identity);
+            transform.position + dirRay.direction, 
+            Quaternion.identity);
 
         //apply impulse in direction to mouse position
         var body = bullet.GetComponent<Rigidbody>();
-        body.AddForce(dirRay.direction * shootForce, ForceMode.Impulse);
+        body.AddForce(dirRay.direction * shootForce, 
+            ForceMode.Impulse);
     }
 
     private void ShootAngled()

@@ -9,13 +9,13 @@ public class ForceExample : MonoBehaviour {
     private Rigidbody body;
 
     // Use this for initialization
-	void Start () 
+	void Start() 
 	{
 		body = GetComponent<Rigidbody>();
 	}
 	
 	// FixedUpdate is called once per physics update step
-	void FixedUpdate ()
+	void FixedUpdate()
 	{
 		float xInput = Input.GetAxis("Horizontal");
 	    float yInput = Input.GetAxis("Vertical");
@@ -33,7 +33,8 @@ public class ForceExample : MonoBehaviour {
 		// Jump: add vertical impulse
 		if (Input.GetButtonDown("Jump"))
 		{
-			body.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+			body.AddForce(Vector3.up * jumpForce, 
+				ForceMode.Impulse);
 		}
 	}
 }

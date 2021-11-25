@@ -114,7 +114,7 @@ TextureImporter:
       213: 21300072
     second: misc-2_36
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -134,6 +134,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -143,8 +145,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -165,9 +167,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -995,6 +1001,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      misc-2_18: 21300036
+      misc-2_6: 21300012
+      misc-2_29: 21300058
+      misc-2_35: 21300070
+      misc-2_36: 21300072
+      misc-2_14: 21300028
+      misc-2_9: 21300018
+      misc-2_17: 21300034
+      misc-2_26: 21300052
+      misc-2_30: 21300060
+      misc-2_22: 21300044
+      misc-2_7: 21300014
+      misc-2_10: 21300020
+      misc-2_4: 21300008
+      misc-2_33: 21300066
+      misc-2_23: 21300046
+      misc-2_2: 21300004
+      misc-2_12: 21300024
+      misc-2_20: 21300040
+      misc-2_27: 21300054
+      misc-2_25: 21300050
+      misc-2_3: 21300006
+      misc-2_0: 21300000
+      misc-2_15: 21300030
+      misc-2_1: 21300002
+      misc-2_21: 21300042
+      misc-2_13: 21300026
+      misc-2_11: 21300022
+      misc-2_28: 21300056
+      misc-2_16: 21300032
+      misc-2_24: 21300048
+      misc-2_32: 21300064
+      misc-2_8: 21300016
+      misc-2_5: 21300010
+      misc-2_19: 21300038
+      misc-2_31: 21300062
+      misc-2_34: 21300068
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

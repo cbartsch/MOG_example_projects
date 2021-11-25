@@ -795,7 +795,7 @@ TextureImporter:
       213: 21300526
     second: characters_263
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -815,6 +815,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -824,8 +826,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -846,9 +848,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -6443,6 +6449,271 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      characters_23: 21300046
+      characters_34: 21300068
+      characters_167: 21300334
+      characters_191: 21300382
+      characters_87: 21300174
+      characters_2: 21300004
+      characters_68: 21300136
+      characters_36: 21300072
+      characters_199: 21300398
+      characters_133: 21300266
+      characters_169: 21300338
+      characters_216: 21300432
+      characters_84: 21300168
+      characters_78: 21300156
+      characters_215: 21300430
+      characters_98: 21300196
+      characters_223: 21300446
+      characters_134: 21300268
+      characters_231: 21300462
+      characters_27: 21300054
+      characters_139: 21300278
+      characters_77: 21300154
+      characters_170: 21300340
+      characters_72: 21300144
+      characters_73: 21300146
+      characters_145: 21300290
+      characters_83: 21300166
+      characters_9: 21300018
+      characters_22: 21300044
+      characters_29: 21300058
+      characters_132: 21300264
+      characters_186: 21300372
+      characters_210: 21300420
+      characters_63: 21300126
+      characters_19: 21300038
+      characters_178: 21300356
+      characters_193: 21300386
+      characters_259: 21300518
+      characters_48: 21300096
+      characters_207: 21300414
+      characters_124: 21300248
+      characters_108: 21300216
+      characters_43: 21300086
+      characters_66: 21300132
+      characters_61: 21300122
+      characters_233: 21300466
+      characters_225: 21300450
+      characters_209: 21300418
+      characters_70: 21300140
+      characters_149: 21300298
+      characters_221: 21300442
+      characters_129: 21300258
+      characters_75: 21300150
+      characters_190: 21300380
+      characters_144: 21300288
+      characters_46: 21300092
+      characters_203: 21300406
+      characters_64: 21300128
+      characters_230: 21300460
+      characters_89: 21300178
+      characters_147: 21300294
+      characters_115: 21300230
+      characters_182: 21300364
+      characters_200: 21300400
+      characters_67: 21300134
+      characters_74: 21300148
+      characters_229: 21300458
+      characters_57: 21300114
+      characters_138: 21300276
+      characters_204: 21300408
+      characters_101: 21300202
+      characters_18: 21300036
+      characters_188: 21300376
+      characters_79: 21300158
+      characters_197: 21300394
+      characters_62: 21300124
+      characters_11: 21300022
+      characters_51: 21300102
+      characters_187: 21300374
+      characters_7: 21300014
+      characters_163: 21300326
+      characters_44: 21300088
+      characters_3: 21300006
+      characters_4: 21300008
+      characters_85: 21300170
+      characters_99: 21300198
+      characters_130: 21300260
+      characters_165: 21300330
+      characters_201: 21300402
+      characters_249: 21300498
+      characters_213: 21300426
+      characters_100: 21300200
+      characters_189: 21300378
+      characters_250: 21300500
+      characters_116: 21300232
+      characters_16: 21300032
+      characters_91: 21300182
+      characters_198: 21300396
+      characters_60: 21300120
+      characters_112: 21300224
+      characters_114: 21300228
+      characters_119: 21300238
+      characters_137: 21300274
+      characters_247: 21300494
+      characters_88: 21300176
+      characters_93: 21300186
+      characters_59: 21300118
+      characters_126: 21300252
+      characters_71: 21300142
+      characters_80: 21300160
+      characters_205: 21300410
+      characters_120: 21300240
+      characters_241: 21300482
+      characters_158: 21300316
+      characters_262: 21300524
+      characters_42: 21300084
+      characters_181: 21300362
+      characters_173: 21300346
+      characters_179: 21300358
+      characters_183: 21300366
+      characters_171: 21300342
+      characters_37: 21300074
+      characters_220: 21300440
+      characters_155: 21300310
+      characters_248: 21300496
+      characters_54: 21300108
+      characters_227: 21300454
+      characters_14: 21300028
+      characters_15: 21300030
+      characters_35: 21300070
+      characters_212: 21300424
+      characters_109: 21300218
+      characters_260: 21300520
+      characters_211: 21300422
+      characters_161: 21300322
+      characters_33: 21300066
+      characters_142: 21300284
+      characters_111: 21300222
+      characters_92: 21300184
+      characters_143: 21300286
+      characters_246: 21300492
+      characters_228: 21300456
+      characters_236: 21300472
+      characters_1: 21300002
+      characters_261: 21300522
+      characters_263: 21300526
+      characters_157: 21300314
+      characters_5: 21300010
+      characters_6: 21300012
+      characters_176: 21300352
+      characters_242: 21300484
+      characters_125: 21300250
+      characters_24: 21300048
+      characters_0: 21300000
+      characters_50: 21300100
+      characters_232: 21300464
+      characters_26: 21300052
+      characters_123: 21300246
+      characters_206: 21300412
+      characters_38: 21300076
+      characters_102: 21300204
+      characters_153: 21300306
+      characters_175: 21300350
+      characters_252: 21300504
+      characters_110: 21300220
+      characters_245: 21300490
+      characters_40: 21300080
+      characters_160: 21300320
+      characters_237: 21300474
+      characters_146: 21300292
+      characters_10: 21300020
+      characters_13: 21300026
+      characters_168: 21300336
+      characters_31: 21300062
+      characters_166: 21300332
+      characters_128: 21300256
+      characters_172: 21300344
+      characters_53: 21300106
+      characters_28: 21300056
+      characters_140: 21300280
+      characters_195: 21300390
+      characters_218: 21300436
+      characters_222: 21300444
+      characters_224: 21300448
+      characters_240: 21300480
+      characters_82: 21300164
+      characters_180: 21300360
+      characters_97: 21300194
+      characters_184: 21300368
+      characters_30: 21300060
+      characters_8: 21300016
+      characters_254: 21300508
+      characters_17: 21300034
+      characters_55: 21300110
+      characters_185: 21300370
+      characters_251: 21300502
+      characters_152: 21300304
+      characters_238: 21300476
+      characters_32: 21300064
+      characters_256: 21300512
+      characters_127: 21300254
+      characters_20: 21300040
+      characters_150: 21300300
+      characters_234: 21300468
+      characters_243: 21300486
+      characters_47: 21300094
+      characters_86: 21300172
+      characters_217: 21300434
+      characters_131: 21300262
+      characters_105: 21300210
+      characters_94: 21300188
+      characters_196: 21300392
+      characters_69: 21300138
+      characters_253: 21300506
+      characters_235: 21300470
+      characters_192: 21300384
+      characters_65: 21300130
+      characters_257: 21300514
+      characters_96: 21300192
+      characters_21: 21300042
+      characters_202: 21300404
+      characters_159: 21300318
+      characters_12: 21300024
+      characters_41: 21300082
+      characters_106: 21300212
+      characters_95: 21300190
+      characters_39: 21300078
+      characters_135: 21300270
+      characters_113: 21300226
+      characters_226: 21300452
+      characters_148: 21300296
+      characters_81: 21300162
+      characters_121: 21300242
+      characters_45: 21300090
+      characters_25: 21300050
+      characters_208: 21300416
+      characters_194: 21300388
+      characters_255: 21300510
+      characters_56: 21300112
+      characters_122: 21300244
+      characters_258: 21300516
+      characters_117: 21300234
+      characters_49: 21300098
+      characters_118: 21300236
+      characters_107: 21300214
+      characters_214: 21300428
+      characters_156: 21300312
+      characters_141: 21300282
+      characters_90: 21300180
+      characters_104: 21300208
+      characters_136: 21300272
+      characters_174: 21300348
+      characters_162: 21300324
+      characters_76: 21300152
+      characters_103: 21300206
+      characters_58: 21300116
+      characters_219: 21300438
+      characters_177: 21300354
+      characters_151: 21300302
+      characters_239: 21300478
+      characters_164: 21300328
+      characters_154: 21300308
+      characters_244: 21300488
+      characters_52: 21300104
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

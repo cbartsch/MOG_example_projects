@@ -906,7 +906,7 @@ TextureImporter:
       213: 21300600
     second: misc_300
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -926,6 +926,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -935,8 +937,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -957,9 +959,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -7310,6 +7316,307 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      misc_226: 21300452
+      misc_62: 21300124
+      misc_60: 21300120
+      misc_42: 21300084
+      misc_83: 21300166
+      misc_273: 21300546
+      misc_131: 21300262
+      misc_168: 21300336
+      misc_291: 21300582
+      misc_200: 21300400
+      misc_15: 21300030
+      misc_23: 21300046
+      misc_6: 21300012
+      misc_44: 21300088
+      misc_172: 21300344
+      misc_212: 21300424
+      misc_210: 21300420
+      misc_248: 21300496
+      misc_69: 21300138
+      misc_94: 21300188
+      misc_267: 21300534
+      misc_285: 21300570
+      misc_5: 21300010
+      misc_280: 21300560
+      misc_176: 21300352
+      misc_84: 21300168
+      misc_177: 21300354
+      misc_258: 21300516
+      misc_143: 21300286
+      misc_278: 21300556
+      misc_179: 21300358
+      misc_189: 21300378
+      misc_107: 21300214
+      misc_9: 21300018
+      misc_214: 21300428
+      misc_138: 21300276
+      misc_101: 21300202
+      misc_225: 21300450
+      misc_289: 21300578
+      misc_10: 21300020
+      misc_290: 21300580
+      misc_163: 21300326
+      misc_178: 21300356
+      misc_195: 21300390
+      misc_230: 21300460
+      misc_209: 21300418
+      misc_259: 21300518
+      misc_161: 21300322
+      misc_27: 21300054
+      misc_219: 21300438
+      misc_116: 21300232
+      misc_32: 21300064
+      misc_3: 21300006
+      misc_296: 21300592
+      misc_220: 21300440
+      misc_251: 21300502
+      misc_8: 21300016
+      misc_47: 21300094
+      misc_188: 21300376
+      misc_66: 21300132
+      misc_162: 21300324
+      misc_228: 21300456
+      misc_232: 21300464
+      misc_99: 21300198
+      misc_231: 21300462
+      misc_105: 21300210
+      misc_203: 21300406
+      misc_90: 21300180
+      misc_180: 21300360
+      misc_50: 21300100
+      misc_54: 21300108
+      misc_166: 21300332
+      misc_266: 21300532
+      misc_213: 21300426
+      misc_57: 21300114
+      misc_123: 21300246
+      misc_39: 21300078
+      misc_14: 21300028
+      misc_29: 21300058
+      misc_88: 21300176
+      misc_262: 21300524
+      misc_254: 21300508
+      misc_147: 21300294
+      misc_260: 21300520
+      misc_16: 21300032
+      misc_153: 21300306
+      misc_238: 21300476
+      misc_51: 21300102
+      misc_19: 21300038
+      misc_25: 21300050
+      misc_150: 21300300
+      misc_149: 21300298
+      misc_173: 21300346
+      misc_272: 21300544
+      misc_207: 21300414
+      misc_18: 21300036
+      misc_125: 21300250
+      misc_148: 21300296
+      misc_86: 21300172
+      misc_64: 21300128
+      misc_67: 21300134
+      misc_72: 21300144
+      misc_92: 21300184
+      misc_71: 21300142
+      misc_175: 21300350
+      misc_129: 21300258
+      misc_79: 21300158
+      misc_237: 21300474
+      misc_13: 21300026
+      misc_152: 21300304
+      misc_110: 21300220
+      misc_292: 21300584
+      misc_77: 21300154
+      misc_198: 21300396
+      misc_245: 21300490
+      misc_24: 21300048
+      misc_61: 21300122
+      misc_246: 21300492
+      misc_43: 21300086
+      misc_97: 21300194
+      misc_120: 21300240
+      misc_109: 21300218
+      misc_211: 21300422
+      misc_261: 21300522
+      misc_233: 21300466
+      misc_253: 21300506
+      misc_234: 21300468
+      misc_121: 21300242
+      misc_33: 21300066
+      misc_182: 21300364
+      misc_192: 21300384
+      misc_111: 21300222
+      misc_222: 21300444
+      misc_257: 21300514
+      misc_293: 21300586
+      misc_122: 21300244
+      misc_73: 21300146
+      misc_269: 21300538
+      misc_193: 21300386
+      misc_216: 21300432
+      misc_128: 21300256
+      misc_30: 21300060
+      misc_81: 21300162
+      misc_183: 21300366
+      misc_201: 21300402
+      misc_286: 21300572
+      misc_127: 21300254
+      misc_263: 21300526
+      misc_294: 21300588
+      misc_240: 21300480
+      misc_53: 21300106
+      misc_52: 21300104
+      misc_235: 21300470
+      misc_196: 21300392
+      misc_242: 21300484
+      misc_59: 21300118
+      misc_208: 21300416
+      misc_204: 21300408
+      misc_274: 21300548
+      misc_108: 21300216
+      misc_295: 21300590
+      misc_299: 21300598
+      misc_270: 21300540
+      misc_227: 21300454
+      misc_118: 21300236
+      misc_80: 21300160
+      misc_217: 21300434
+      misc_35: 21300070
+      misc_154: 21300308
+      misc_146: 21300292
+      misc_184: 21300368
+      misc_170: 21300340
+      misc_36: 21300072
+      misc_144: 21300288
+      misc_206: 21300412
+      misc_85: 21300170
+      misc_12: 21300024
+      misc_265: 21300530
+      misc_63: 21300126
+      misc_277: 21300554
+      misc_215: 21300430
+      misc_264: 21300528
+      misc_283: 21300566
+      misc_26: 21300052
+      misc_75: 21300150
+      misc_282: 21300564
+      misc_135: 21300270
+      misc_104: 21300208
+      misc_187: 21300374
+      misc_194: 21300388
+      misc_243: 21300486
+      misc_165: 21300330
+      misc_100: 21300200
+      misc_151: 21300302
+      misc_276: 21300552
+      misc_56: 21300112
+      misc_20: 21300040
+      misc_95: 21300190
+      misc_119: 21300238
+      misc_158: 21300316
+      misc_156: 21300312
+      misc_247: 21300494
+      misc_82: 21300164
+      misc_115: 21300230
+      misc_136: 21300272
+      misc_113: 21300226
+      misc_22: 21300044
+      misc_124: 21300248
+      misc_287: 21300574
+      misc_288: 21300576
+      misc_45: 21300090
+      misc_142: 21300284
+      misc_164: 21300328
+      misc_284: 21300568
+      misc_55: 21300110
+      misc_74: 21300148
+      misc_76: 21300152
+      misc_98: 21300196
+      misc_139: 21300278
+      misc_190: 21300380
+      misc_89: 21300178
+      misc_236: 21300472
+      misc_181: 21300362
+      misc_275: 21300550
+      misc_221: 21300442
+      misc_160: 21300320
+      misc_21: 21300042
+      misc_34: 21300068
+      misc_106: 21300212
+      misc_297: 21300594
+      misc_133: 21300266
+      misc_137: 21300274
+      misc_49: 21300098
+      misc_46: 21300092
+      misc_171: 21300342
+      misc_1: 21300002
+      misc_87: 21300174
+      misc_38: 21300076
+      misc_40: 21300080
+      misc_202: 21300404
+      misc_17: 21300034
+      misc_7: 21300014
+      misc_268: 21300536
+      misc_134: 21300268
+      misc_114: 21300228
+      misc_141: 21300282
+      misc_239: 21300478
+      misc_185: 21300370
+      misc_249: 21300498
+      misc_157: 21300314
+      misc_145: 21300290
+      misc_48: 21300096
+      misc_223: 21300446
+      misc_11: 21300022
+      misc_298: 21300596
+      misc_132: 21300264
+      misc_250: 21300500
+      misc_229: 21300458
+      misc_244: 21300488
+      misc_224: 21300448
+      misc_41: 21300082
+      misc_130: 21300260
+      misc_28: 21300056
+      misc_0: 21300000
+      misc_252: 21300504
+      misc_65: 21300130
+      misc_96: 21300192
+      misc_169: 21300338
+      misc_281: 21300562
+      misc_140: 21300280
+      misc_186: 21300372
+      misc_70: 21300140
+      misc_58: 21300116
+      misc_218: 21300436
+      misc_256: 21300512
+      misc_112: 21300224
+      misc_31: 21300062
+      misc_91: 21300182
+      misc_78: 21300156
+      misc_93: 21300186
+      misc_271: 21300542
+      misc_102: 21300204
+      misc_159: 21300318
+      misc_68: 21300136
+      misc_205: 21300410
+      misc_103: 21300206
+      misc_191: 21300382
+      misc_126: 21300252
+      misc_197: 21300394
+      misc_155: 21300310
+      misc_117: 21300234
+      misc_167: 21300334
+      misc_241: 21300482
+      misc_255: 21300510
+      misc_174: 21300348
+      misc_2: 21300004
+      misc_199: 21300398
+      misc_279: 21300558
+      misc_37: 21300074
+      misc_4: 21300008
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -31,8 +31,9 @@ public class CollisionTest : MonoBehaviour {
             transform.position = initialPosition;
 
             //reset velocity
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            var body = GetComponent<Rigidbody>();
+            body.velocity = Vector3.zero;
+            body.angularVelocity = Vector3.zero;
         }
     }
 
