@@ -7,9 +7,8 @@ public class PlayerLogic : NetworkBehaviour {
 
     public float moveSpeed = 10, rotateSpeed = 4;
 
-    //synchronize points from server to all clients
+    //synchronize points and color from server to all clients
     private NetworkVariable<int> points;
-
     private NetworkVariable<Color> color;
 
     //public accessor
@@ -22,15 +21,14 @@ public class PlayerLogic : NetworkBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        var networkId = GetComponent<NetworkObject>();
-
         if (NetworkManager.Singleton.IsServer)
         {
             //server "chooses" color for players (SyncVars sync from server to client)
             color.Value = Random.ColorHSV(
                 0, 1,
                 0.5f, 1, 
-                0.5f, 1); //generates colors that are neither too dark nor too bright
+                0.5f, 1); 
+            //generates colors that are neither too dark nor too bright
         }
     }
 	
