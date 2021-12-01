@@ -27,9 +27,14 @@ public class PlayerLogic : MonoBehaviour {
         body.AddForce(body.transform.forward * Input.GetAxis("Vertical") * moveSpeed);
         body.AddTorque(body.transform.up * Input.GetAxis("Horizontal") * rotateSpeed);
 
-        var intensity = Vector3.Scale(body.velocity, new Vector3(1, 0, 1)).magnitude;
-        particlesMain.startLifetime = intensity / 20;
-        particlesMain.startSpeed = intensity;
+        // body.velocity is in global coordinates.
+        // check local z-velocity to get current forward speed
+        var localVelocity = transform.InverseTransformDirection(body.velocity);
+        var forwardSpeed = localVelocity.z;
+        
+        // scale particles emission with speed
+        particlesMain.startLifetime = forwardSpeed / 10;
+        particlesMain.startSpeed = forwardSpeed / 2;
 
         if (Input.GetButtonDown("Jump")) {
             body.AddForce(body.transform.up * jumpSpeed, ForceMode.Impulse);

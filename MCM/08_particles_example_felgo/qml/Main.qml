@@ -64,7 +64,8 @@ GameWindow {
         delegate: Rectangle {
           property real size: 0
 
-          color: "red"
+          property real hue: 0
+          color: Qt.hsla(hue, 1, 0.5, 1)
 
           width: size
           height: size
@@ -78,12 +79,12 @@ GameWindow {
             onRunningChanged: if(!running) size = 0
           }
 
-          PropertyAnimation on color {
-            from: "red"
-            to: "blue"
+          PropertyAnimation on hue {
+            from: 0
+            to: 1
             running: true
             duration: emitter.lifeSpan / 2
-            onRunningChanged: if(!running) color = "red"
+            onRunningChanged: if(!running) hue = 0
           }
         }
       }
