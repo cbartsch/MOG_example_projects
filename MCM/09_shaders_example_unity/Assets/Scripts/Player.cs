@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Player : MonoBehaviour {
     public float moveSpeed = 1;
     private State state1;
@@ -41,8 +43,8 @@ public class Player : MonoBehaviour {
         transform.Translate(movement * moveSpeed * Time.deltaTime);
 
         var screenPos = Camera.main.WorldToScreenPoint(transform.position);
-        lanternRenderer.material.SetFloat("_PosX", screenPos.x);
-        lanternRenderer.material.SetFloat("_PosY", screenPos.y);
+        lanternRenderer.sharedMaterial.SetFloat("_PosX", screenPos.x);
+        lanternRenderer.sharedMaterial.SetFloat("_PosY", screenPos.y);
 
         var angle = Vector2.Angle(movement, Vector2.up);
         if (movement.sqrMagnitude < 0.01) {
@@ -61,6 +63,6 @@ public class Player : MonoBehaviour {
 
         var renderer = GetComponent<SpriteRenderer>();
         renderer.flipX = movement.x < 0;
-        lanternRenderer.material.SetFloat("_Angle", angle * Mathf.Sign(movement.x));
+        lanternRenderer.sharedMaterial.SetFloat("_Angle", angle * Mathf.Sign(movement.x));
     }
 }

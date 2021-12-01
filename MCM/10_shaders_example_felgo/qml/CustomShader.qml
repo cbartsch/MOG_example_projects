@@ -29,8 +29,18 @@ Item {
                   uniform sampler2D src;
                   uniform lowp float qt_Opacity;
                   void main() {
-                      lowp vec4 tex = texture2D(src, coord);
-                      gl_FragColor.rgb = vec3(1) - tex.rgb;
+                      vec2 move;
+
+                      // move lookup coordinate by a bit
+                      //move = sin(coord * 100) * 0.01;
+
+                      lowp vec4 tex = texture2D(src, coord + move);
+                      vec3 outRgb = tex.rgb;
+
+                      // invert color
+                      //outRgb = vec3(1) - outRgb;
+
+                      gl_FragColor.rgb = outRgb;
                       gl_FragColor.a = tex.a;
                   }"
 

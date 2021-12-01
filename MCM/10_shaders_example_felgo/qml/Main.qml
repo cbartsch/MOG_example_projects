@@ -18,6 +18,11 @@ GameWindow {
     width: 960
     height: 640
 
+    Rectangle {
+      anchors.fill: parent
+      color: "white"
+    }
+
     Grid {
       anchors.centerIn: parent
 
