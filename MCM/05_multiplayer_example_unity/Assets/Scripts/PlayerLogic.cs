@@ -14,8 +14,8 @@ public class PlayerLogic : NetworkBehaviour {
     //public accessor
     public int Points
     {
-        get { return points.Value; }
-        set { points.Value = value; }
+        get => points.Value;
+        set => points.Value = value;
     }
 
 	// Use this for initialization

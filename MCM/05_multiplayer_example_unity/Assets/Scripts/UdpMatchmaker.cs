@@ -47,7 +47,8 @@ public class UdpMatchmaker : MonoBehaviour {
 
             //send message once per second
             if (timeUntilMsg <= 0) {
-                server.Send(MSG, MSG.Length, new IPEndPoint(IPAddress.Broadcast, matchmakingPort));
+                server.Send(MSG, MSG.Length, 
+                    new IPEndPoint(IPAddress.Broadcast, matchmakingPort));
                 timeUntilMsg += 1;
             }
 

@@ -18,11 +18,6 @@ public class NetworkManagerUI : MonoBehaviour {
 
     public short port;
 
-    // Use this for initialization
-    void Start() {
-    }
-
-    // Update is called once per frame
     void Update() {
         updateUI();
     }
@@ -55,11 +50,7 @@ public class NetworkManagerUI : MonoBehaviour {
     }
 
     public void Disconnect() {
-        if (networkManager.IsClient) {
-            networkManager.Shutdown();
-        }
-
-        if (networkManager.IsServer) {
+        if (networkManager.IsClient || networkManager.IsServer) {
             networkManager.Shutdown();
         }
     }

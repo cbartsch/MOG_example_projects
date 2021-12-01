@@ -57,6 +57,8 @@ GameWindow {
 
     playerCount: 2
 
+    appKey: "7664a8f6-47d9-4142-8de0-2bf356cff906"
+
     onGameStarted: activeScene = gameScene
     onGameEnded: activeScene = menuScene
     onGameLeft: activeScene = menuScene

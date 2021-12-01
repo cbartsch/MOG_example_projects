@@ -27,17 +27,19 @@ public class GameLogic : MonoBehaviour {
         //spawn collectible at random X/Z pos if none exists
         if (collectible == null) {
             float maxPos = 7.5f;
+            
+            float xPos = Random.Range(-maxPos, maxPos);
             float yPos = -5;
-            collectible = (Instantiate(
+            float zPos = Random.Range(-maxPos, maxPos);
+
+            var newInstance = Instantiate(
                 collectiblePrefab, //template
-                new Vector3( //position
-                    Random.Range(-maxPos, maxPos), yPos,
-                    Random.Range(-maxPos, maxPos)),
+                new Vector3(xPos, yPos, zPos),
                 Quaternion.identity, //rotation
                 gameWorld.transform //parent
-            ) as GameObject).GetComponent<CollectibleLogic>();
+            ); 
 
-            collectible.gameObject.GetComponent<NetworkObject>().Spawn();
+            newInstance.GetComponent<NetworkObject>().Spawn();
         }
     }
 }
