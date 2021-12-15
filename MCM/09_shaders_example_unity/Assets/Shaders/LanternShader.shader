@@ -13,7 +13,7 @@
     {
         Tags {
 			"Queue" = "Transparent"
-			"RenderType"="Transparent"
+			"RenderType" = "Transparent"
 		}
         LOD 100
 		Blend SrcAlpha OneMinusSrcAlpha
@@ -77,7 +77,7 @@
 
 				fixed4 col = _Color;
 				// use greater alpha for output
-				col.a = min(1, max(lenAlpha, angleAlpha));
+				col.a *= min(1, max(lenAlpha, angleAlpha));
 
                 return col;
             }
